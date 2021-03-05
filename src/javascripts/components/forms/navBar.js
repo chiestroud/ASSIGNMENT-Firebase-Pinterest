@@ -21,19 +21,19 @@ const navBar = () => {
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" id="sale-books"></a>
+              <a class="nav-link" href="#" id="---"></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" id="favorite-authors"></a>
+              <a class="nav-link" href="#" id="---"></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" id="authors"></a>
+              <a class="nav-link" href="#" id="---"></a>
             </li>
             <li>
             <input
               class="form-control mr-sm-2"
               id="search"
-              placeholder="Search Book Titles"
+              placeholder="Search Boards & Pins"
               aria-label="Search"
             />
             </li>
