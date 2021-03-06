@@ -1,4 +1,6 @@
 const showBoards = (array) => {
+  document.querySelector('#goBackButton').innerHTML = '';
+  document.querySelector('#main').innerHTML = '';
   document.querySelector('#goBackButton').innerHTML = '<h1>List of boards</h1>';
   array.forEach((item) => {
     document.querySelector('#main').innerHTML += `<div class="card board" style="width: 20rem;">
