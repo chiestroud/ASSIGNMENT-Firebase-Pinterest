@@ -2,8 +2,18 @@
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
 
 body {
-  background-color: antiquewhite;
+  background-color:#111;
   color: brown;
   text-align: center;
   margin-top: 100px;
+}
+
+#main {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.board {
+  margin: 0 auto;
 }
