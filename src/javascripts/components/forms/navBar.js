@@ -1,4 +1,4 @@
-const navBar = () => {
+const navBar = (userObject) => {
   document.querySelector('#navigation').innerHTML = `
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark mb-4">
         <a class="navbar-brand title" href="#">Pinterest</a>
@@ -38,7 +38,8 @@ const navBar = () => {
             />
             </li>
           </ul>
-          <div id="loginButton"></div>
+          <div id="welcomeMsg" class="mr-3">Welcome back ${userObject.displayName}</div>
+          <img id="profileImg" class="mr-3" src="${userObject.photoURL}"></img>
           <div id="logoutButton"><button id="google-auth" class="btn btn-danger">SIGNOUT</button></div>
         </div>
       </nav>
