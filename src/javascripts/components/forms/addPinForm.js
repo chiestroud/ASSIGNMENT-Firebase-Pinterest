@@ -8,14 +8,13 @@ const addPinForm = () => {
                                                       </div>
                                                       <div class="form-group">
                                                         <label for="title">Image URL</label>
-                                                        <input type="url" class="form-control" id="url" aria-describedby="imageUrl" placeholder="Image URL" required>
+                                                        <input type="url" class="form-control" id="pinUrl" aria-describedby="imageUrl" placeholder="Image URL" required>
                                                       </div>
-                                                      <div class="form-group" id="select-board"></div>
-                                                      <div class="form-check">
-                                                        <input type="checkbox" class="form-check-input" id="favorite">
-                                                        <label class="form-check-label" for="favorite">Favorite Board?</label>
+                                                      <div class="form-group" id="select-board">
+                                                        <label for="title">Select A Board</label>
+                                                        <input type="url" class="form-control" id="boardId" aria-describedby="selectedBoard" placeholder="Select A Board" required>
                                                       </div>
-                                                      <button type="submit" id="submit-board" class="btn btn-primary">Submit Board</button>
+                                                      <button type="submit" id="submit-pin" class="btn btn-primary">Submit Pin</button>
                                                     </form>`;
   selectBoard();
 };

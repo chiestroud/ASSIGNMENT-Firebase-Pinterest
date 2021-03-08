@@ -1,3 +1,5 @@
+import firebase from 'firebase/app';
+import 'firebase/auth';
 import { emptyBoards, showBoards } from '../components/boards';
 import addBoardForm from '../components/forms/addBoardForm';
 import addPinForm from '../components/forms/addPinForm';
@@ -6,9 +8,9 @@ import formModal from '../components/forms/formModal';
 import selectPins from '../components/forms/selectPins';
 
 import { showPins } from '../components/pins';
-import { getBoard } from '../helpers/data/boardData';
+import { createBoard, getBoard } from '../helpers/data/boardData';
 import { boardPinInfo, deleteBoardPins } from '../helpers/data/pinBoardsData';
-import { deletePin } from '../helpers/data/pinData';
+import { createPin, deletePin } from '../helpers/data/pinData';
 
 const domEvents = (uid) => {
   document.querySelector('body').addEventListener('click', (e) => {
@@ -28,11 +30,35 @@ const domEvents = (uid) => {
       addBoardForm();
       $('#formModal').modal('toggle');
     }
+    // CLICK EVENT FOR SUBMITTING FORM FOR THE BOARDS
+    if (e.target.id.includes('submit-board')) {
+      e.preventDefault();
+      const boardObject = {
+        board_name: document.querySelector('#boardName').value,
+        image: document.querySelector('#url').value,
+        favorite: document.querySelector('#favorite').checked,
+        uid: firebase.auth().currentUser.uid
+      };
+      createBoard(boardObject, uid).then((boardsArray) => showBoards(boardsArray));
+      $('#formModal').modal('toggle');
+    }
 
     // CLICK EVENT FOR SHOWING FORM FOR ADDING A NEW PIN
     if (e.target.id.includes('add-pin-btn')) {
       formModal('Add A New Pin');
       addPinForm();
+      $('#formModal').modal('toggle');
+    }
+    // CLICK EVENT FOR SUBMITTING FORM FOR THE PINS
+    if (e.target.id.includes('submit-pin')) {
+      e.preventDefault();
+      const pinObject = {
+        pin_name: document.querySelector('#pinName').value,
+        img: document.querySelector('#pinUrl').value,
+        board_id: document.querySelector('#selectedBoard').value,
+        uid: firebase.auth().currentUser.uid
+      };
+      createPin(pinObject, uid).then((pinsArray) => showPins(pinsArray));
       $('#formModal').modal('toggle');
     }
     // RETURN TO BOARD FROM PINNED
