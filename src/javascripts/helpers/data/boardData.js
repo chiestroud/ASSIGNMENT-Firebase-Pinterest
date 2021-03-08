@@ -4,8 +4,8 @@ import firebaseConfig from '../auth/apiKeys';
 const dbUrl = firebaseConfig.databaseURL;
 
 // GET ALL THE BOARDS
-const getBoard = () => new Promise((resolve, reject) => {
-  axios.get(`${dbUrl}/boards.json`)
+const getBoard = (uid) => new Promise((resolve, reject) => {
+  axios.get(`${dbUrl}/boards.json?orderBy="uid"&equalTo="${uid}"`)
     .then((response) => resolve(Object.values(response.data)))
     .catch((error) => reject(error));
 });
@@ -18,9 +18,9 @@ const getSingleBoard = (firebaseKey) => new Promise((resolve, reject) => {
 });
 
 // DELETE BOARD
-const deleteBoard = (firebaseKey) => new Promise((resolve, reject) => {
+const deleteBoard = (firebaseKey, uid) => new Promise((resolve, reject) => {
   axios.delete(`${dbUrl}/boards/${firebaseKey}.json`)
-    .then(() => getBoard().then((boardsArray) => resolve(boardsArray)))
+    .then(() => getBoard(uid).then((boardsArray) => resolve(boardsArray)))
     .catch((error) => reject(error));
 });
 

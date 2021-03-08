@@ -1,7 +1,5 @@
 import firebase from 'firebase/app';
 import 'firebase/auth';
-// import getBoard from '../../helpers/data/boardData';
-// import { emptyBoards, showBoards } from '../boards';
 
 const signMeOut = () => {
   firebase.auth().signOut();
