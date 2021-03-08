@@ -16,6 +16,20 @@ body {
   flex-wrap: wrap;
 }
 
+#profileImg {
+  height: 60px;
+  border-radius: 50%;
+  object-fit: fill;
+}
+
+#welcomeMsg {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.navbar-brand {
+  font-size: 2rem;
+}
 
 .home-title {
   font-size: 8rem;
@@ -52,4 +66,10 @@ body {
 
 .s {
   color: #f26b38;
+}
+
+.headerProfile {
+  height: 120px;
+  border-radius: 50%;
+  object-fit: fill;
 }

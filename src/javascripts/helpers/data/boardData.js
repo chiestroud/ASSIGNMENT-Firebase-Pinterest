@@ -1,3 +1,5 @@
+import firebase from 'firebase/app';
+import 'firebase/auth';
 import axios from 'axios';
 import firebaseConfig from '../auth/apiKeys';
 
@@ -36,9 +38,17 @@ const createBoard = (boardObject, uid) => new Promise((resolve, reject) => {
     }).catch((error) => reject(error));
 });
 
+// UPDATE BOARD
+const updateBoard = (firebaseKey, boardObject) => new Promise((resolve, reject) => {
+  axios.patch(`${dbUrl}/boards/${firebaseKey}.json`, boardObject)
+    .then(() => getBoard(firebase.auth().currentUser.uid)).then((boardsArray) => resolve(boardsArray))
+    .catch((error) => reject(error));
+});
+
 export {
   getBoard,
   getSingleBoard,
   deleteBoard,
-  createBoard
+  createBoard,
+  updateBoard
 };
