@@ -4,7 +4,7 @@ import { getBoard } from '../../helpers/data/boardData';
 
 const selectBoard = (pinObject = {}) => {
   let domString = `<label for="board">Select a Board</label>
-                    <select class="form-control" id="board" required>
+                    <select class="form-control" id="selectedBoard" required>
                     <option value="">Select a Board</option>`;
   getBoard(firebase.auth().currentUser.uid).then((boardsArray) => {
     boardsArray.forEach((board) => {

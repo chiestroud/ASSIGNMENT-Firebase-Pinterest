@@ -1,7 +1,7 @@
 const addBoardForm = () => {
   document.querySelector('#modal-body').innerHTML = `<form id="submit-board-form" class="mb-4">
                                                       <div class="form-group">
-                                                        <label for="firstName">Board Name</label>
+                                                        <label for="boardName">Board Name</label>
                                                         <input type="text" class="form-control" id="boardName" aria-describedby="boardName" placeholder="Board Name" required>
                                                       </div>
                                                       <div class="form-group">
