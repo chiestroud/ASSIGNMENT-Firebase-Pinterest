@@ -3,10 +3,10 @@ import { emptyPins, showPins } from '../components/pins';
 import { getBoard } from '../helpers/data/boardData';
 import { getPins } from '../helpers/data/pinData';
 
-const navigationEvents = () => {
+const navigationEvents = (uid) => {
   // ALL BOARDS
   document.querySelector('#all-boards').addEventListener('click', () => {
-    getBoard().then((boardsArray) => {
+    getBoard(uid).then((boardsArray) => {
       if (boardsArray.length) {
         showBoards(boardsArray);
       } else {
@@ -26,7 +26,7 @@ const navigationEvents = () => {
 
   // ALL PINS
   document.querySelector('#all-pins').addEventListener('click', () => {
-    getPins().then((pinsArray) => {
+    getPins(uid).then((pinsArray) => {
       if (pinsArray.length) {
         showPins(pinsArray);
       } else {

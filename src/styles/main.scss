@@ -1,5 +1,7 @@
 @import "~bootstrap/scss/bootstrap";
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
+@import "./board.scss";
+@import "./pin.scss";
 
 body {
   background-color:#111;
@@ -14,6 +16,40 @@ body {
   flex-wrap: wrap;
 }
 
-.board {
-  margin: 0 auto;
+
+.home-title {
+  font-size: 3rem;
+  margin: 15px;
+}
+
+.p {
+  color: #A7226E;
+}
+
+.i {
+  color: #ec2049;
+}
+
+.n {
+  color: #f26b38;
+}
+
+.t {
+  color: #f7db4f;
+}
+
+.e {
+  color: #2f9599;
+}
+
+.r {
+  color: #a7226e;
+}
+
+.e2 {
+  color: #ec2049;
+}
+
+.s {
+  color: #f26b38;
 }

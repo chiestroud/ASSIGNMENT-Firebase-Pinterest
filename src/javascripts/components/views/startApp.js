@@ -1,5 +1,3 @@
-// import getBoard from '../../helpers/data/boardData';
-// import { emptyBoards, showBoards } from '../boards';
 import domEvents from '../../events/domEvent';
 import navigationEvents from '../../events/navigationEvent';
 import { getBoard } from '../../helpers/data/boardData';
@@ -7,12 +5,12 @@ import { emptyBoards, showBoards } from '../boards';
 import domBuilder from '../forms/domBuilder';
 import navBar from '../forms/navBar';
 
-const startApp = () => {
+const startApp = (userObject) => {
   domBuilder();
   navBar();
-  domEvents();
-  navigationEvents();
-  getBoard().then((boardsArray) => {
+  domEvents(userObject.uid);
+  navigationEvents(userObject.uid);
+  getBoard(userObject.uid).then((boardsArray) => {
     if (boardsArray.length) {
       showBoards(boardsArray);
     } else {

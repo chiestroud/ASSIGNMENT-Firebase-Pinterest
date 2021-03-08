@@ -1,0 +1,35 @@
+#return {
+  color: #fff;
+  border-top: 4px solid #48ecc4;
+  border-right: 4px solid #0a5f4a;
+  border-bottom: 4px solid #0f745b;
+  border-left: 4px solid #8cf9de;
+  border-radius: 0;
+  background: #11a37f;
+  margin: 20px;
+}
+
+#return:hover {
+  color: #fff;
+  border-top: 4px solid #0f745b;
+  border-right: 4px solid #8cf9de;
+  border-bottom: 4px solid #48ecc4;
+  border-left: 4px solid #0a5f4a;
+  font-weight: bold;
+}
+
+
+#pinContainer {
+  margin: 5px;
+  align-content: center;
+  height: 350px;
+}
+
+.pinImg {
+  height: 70%;
+  object-fit: cover;
+}
+
+.pinInfo {
+  height: 30%;
+}
