@@ -1,7 +1,17 @@
 const navBar = (userObject) => {
   document.querySelector('#navigation').innerHTML = `
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark mb-4">
-        <a class="navbar-brand title" href="#">Pinterest</a>
+        <a class="navbar-brand title" href="#">
+          <span class="p-nav">P</span>
+          <span class="i-nav">I</span>
+          <span class="n-nav">N</span>
+          <span class="t-nav">T</span>
+          <span class="e-nav">E</span>
+          <span class="r-nav">R</span>
+          <span class="e2-nav">E</span>
+          <span class="s-nav">S</span>
+          <span class="t-nav">T</span>
+        </a>
         <button
           class="navbar-toggler"
           type="button"
@@ -23,15 +33,9 @@ const navBar = (userObject) => {
             <li class="nav-item">
               <a class="nav-link" href="#" id="all-pins">Pins</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#" id="---"></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#" id="---"></a>
-            </li>
             <li>
             <input
-              class="form-control mr-sm-2"
+              class="form-control mr-sm-2 mt-1"
               id="search"
               placeholder="Search Boards & Pins"
               aria-label="Search"

@@ -20,14 +20,17 @@
 
 
 #pinContainer {
-  margin: 5px;
+  margin: 3px;
   align-content: center;
   height: 350px;
+  border-radius: 10%;
+  border: 6px solid #8b0000;
 }
 
 .pinImg {
   height: 70%;
   object-fit: cover;
+  border-radius: 9% 9% 0 0;
 }
 
 .pinInfo {

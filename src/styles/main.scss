@@ -2,12 +2,31 @@
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
 @import "./board.scss";
 @import "./pin.scss";
+@import "./nav.scss";
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import 'vars';
+
+$letters:
+  "p" $p,
+  "i" $i,
+  "n" $n,
+  "t" $t,
+  "e" $e,
+  "r" $r,
+  "e2" $e2,
+  "s" $s;
+
+@each $letter, $hex in $letters {
+  .#{$letter} {
+    color: $hex;
+  }
+}
 
 body {
   background-color:#111;
-  color: brown;
   text-align: center;
   margin-top: 100px;
+  font-family: 'Varela Round', sans-serif;
 }
 
 #main {
@@ -27,8 +46,10 @@ body {
   font-size: 1.5rem;
 }
 
-.navbar-brand {
+.bodyMessage {
+  color: white;
   font-size: 2rem;
+  margin-top: 1.5%;
 }
 
 .home-title {
@@ -36,40 +57,16 @@ body {
   margin: 15px;
 }
 
-.p {
-  color: #A7226E;
-}
-
-.i {
-  color: #ec2049;
-}
-
-.n {
-  color: #f26b38;
-}
-
-.t {
-  color: #f7db4f;
-}
-
-.e {
-  color: #2f9599;
-}
-
-.r {
-  color: #a7226e;
-}
-
-.e2 {
-  color: #ec2049;
-}
-
-.s {
-  color: #f26b38;
-}
-
 .headerProfile {
   height: 120px;
   border-radius: 50%;
   object-fit: fill;
+}
+
+.headerTitle {
+  color: white;
+}
+
+h1.headerTitle {
+  margin-right: 100px;
 }

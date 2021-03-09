@@ -8,7 +8,7 @@ const updatePinForm = (pinObject) => {
   </div>
   <div class="form-group">
     <label for="title">Image URL</label>
-    <input type="url" class="form-control" id="pinUrl" aria-describedby="imageUrl" value="${pinObject.img}" placeholder="Image URL" required>
+    <input type="url" class="form-control" id="pinUrl" aria-describedby="imageUrl" value="${pinObject.image}" placeholder="Image URL" required>
   </div>
   <div class="form-group" id="select-board">
     <label for="title">Select A Board</label>

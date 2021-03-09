@@ -1,4 +1,7 @@
 import signIn from '../../helpers/auth/signIn';
+import { publicPin } from '../../helpers/data/pinData';
+import { emptyPins } from '../pins';
+import { showPublicPins } from '../showPublicPins';
 import homeScreen from '../views/home';
 
 // GOOGLE LOGIN BUTTON
@@ -8,7 +11,15 @@ const loginButton = () => {
   document.querySelector('#google-auth').addEventListener('click', signIn);
   document.querySelector('#goBackButton').innerHTML = '';
   document.querySelector('#navbarNav').innerHTML = '';
+  document.querySelector('#header').innerHTML = '';
   homeScreen();
+  publicPin().then((pinsArray) => {
+    if (pinsArray.length) {
+      showPublicPins(pinsArray);
+    } else {
+      emptyPins();
+    }
+  });
 };
 
 export default loginButton;

@@ -84,7 +84,7 @@ const domEvents = (uid) => {
       e.preventDefault();
       const pinObject = {
         pin_name: document.querySelector('#pinName').value,
-        img: document.querySelector('#pinUrl').value,
+        image: document.querySelector('#pinUrl').value,
         board_id: document.querySelector('#selectedBoard').value,
         uid: firebase.auth().currentUser.uid
       };
@@ -115,7 +115,7 @@ const domEvents = (uid) => {
       e.preventDefault();
       const pinObject = {
         pin_name: document.querySelector('#pinName').value,
-        img: document.querySelector('#pinUrl').value,
+        image: document.querySelector('#pinUrl').value,
         board_id: document.querySelector('#selectedBoard').value,
         uid: firebase.auth().currentUser.uid
       };
