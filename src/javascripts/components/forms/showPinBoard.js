@@ -1,12 +1,6 @@
 const showPinBoards = (pinBoardObject) => {
-  document.querySelector('#goBackButton').innerHTML = '';
   document.querySelector('#main').innerHTML = '';
   document.querySelector('#boardInfo').innerHTML = '';
-  document.querySelector('#goBackButton').innerHTML = `<div class="container d-flex justify-content-around">
-                                                        <h1 class="bodyMessage">List of boards <i class="fas fa-clipboard-list"></i></h1>
-                                                       </div>
-                                                        <button class="btn btn-success mb-3" data-toggle="modal" data-target="#formModal" id="add-board-btn">Add New Board <i class="fas fa-clipboard-list"></i></button>
-                                                        `;
   pinBoardObject.forEach((pin) => {
     document.querySelector('#main').innerHTML += `<div class="card board" style="width: 20rem;">
                                                     <img class="card-img-top boardImg" src=${pin.image} alt=${pin.pin_name}">

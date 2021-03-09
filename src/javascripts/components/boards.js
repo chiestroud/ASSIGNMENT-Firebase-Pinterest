@@ -2,6 +2,8 @@ const showBoards = (array) => {
   document.querySelector('#goBackButton').innerHTML = '';
   document.querySelector('#main').innerHTML = '';
   document.querySelector('#boardInfo').innerHTML = '';
+  document.querySelector('#main').innerHTML = '';
+  document.querySelector('#boardContainer').innerHTML = '';
   document.querySelector('#goBackButton').innerHTML = `<div class="container d-flex justify-content-around">
                                                         <h1 class="bodyMessage">List of boards <i class="fas fa-clipboard-list"></i></h1>
                                                        </div>
