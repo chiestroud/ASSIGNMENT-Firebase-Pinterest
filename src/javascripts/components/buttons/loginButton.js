@@ -8,6 +8,7 @@ const loginButton = () => {
   document.querySelector('#google-auth').addEventListener('click', signIn);
   document.querySelector('#goBackButton').innerHTML = '';
   document.querySelector('#navbarNav').innerHTML = '';
+  document.querySelector('#header').innerHTML = '';
   homeScreen();
 };
 

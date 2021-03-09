@@ -57,11 +57,21 @@ const updatePin = (firebaseKey, pinObject) => new Promise((resolve, reject) => {
     .catch((error) => reject(error));
 });
 
+// SEARCH PINS
+const searchPin = (uid, searchValue) => new Promise((resolve, reject) => {
+  getPins(uid).then((pinsArray) => {
+    const searchItems = pinsArray.filter((s) => s.pin_name.toLowerCase().includes(searchValue));
+    resolve(searchItems);
+  })
+    .catch((error) => reject(error));
+});
+
 export {
   getPins,
   deletePin,
   getSinglePin,
   getBoardPins,
   createPin,
-  updatePin
+  updatePin,
+  searchPin
 };

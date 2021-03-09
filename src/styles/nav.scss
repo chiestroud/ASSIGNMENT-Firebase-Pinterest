@@ -1,0 +1,26 @@
+@import 'vars';
+
+$letters:
+  "p" $p,
+  "i" $i,
+  "n" $n,
+  "t" $t,
+  "e" $e,
+  "r" $r,
+  "e2" $e2,
+  "s" $s;
+
+@each $letter, $hex in $letters {
+  .#{$letter}-nav {
+    color: $hex;
+  }
+}
+
+.navbar-brand {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.nav-link {
+  font-size: 1.4rem;
+}

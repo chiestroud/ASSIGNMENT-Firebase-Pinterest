@@ -45,10 +45,20 @@ const updateBoard = (firebaseKey, boardObject) => new Promise((resolve, reject) 
     .catch((error) => reject(error));
 });
 
+// SEARCH BOARD
+const searchBoard = (uid, searchValue) => new Promise((resolve, reject) => {
+  getBoard(uid).then((boardsArray) => {
+    const searchItems = boardsArray.filter((s) => s.board_name.toLowerCase().includes(searchValue));
+    resolve(searchItems);
+  })
+    .catch((error) => reject(error));
+});
+
 export {
   getBoard,
   getSingleBoard,
   deleteBoard,
   createBoard,
-  updateBoard
+  updateBoard,
+  searchBoard
 };
