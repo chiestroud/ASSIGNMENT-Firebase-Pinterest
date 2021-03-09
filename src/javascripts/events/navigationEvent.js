@@ -1,4 +1,6 @@
 import { emptyBoards, showBoards } from '../components/boards';
+import { showBoardPins } from '../components/forms/showBoardPins';
+import { showPinBoards } from '../components/forms/showPinBoard';
 import { emptyPins, showPins } from '../components/pins';
 import { getBoard } from '../helpers/data/boardData';
 import { searchBoardPin } from '../helpers/data/pinBoardsData';
@@ -21,8 +23,10 @@ const navigationEvents = (uid) => {
     if (e.keyCode === 13) {
       searchBoardPin(uid, searchValue).then((pinBoardObject) => {
         console.warn(pinBoardObject);
-        showPins(pinBoardObject.pin);
-        showBoards(pinBoardObject.board);
+        showBoardPins(pinBoardObject.board);
+        showPinBoards(pinBoardObject.pin);
+        // showPins(pinBoardObject.pin);
+        // showBoards(pinBoardObject.board);
         document.querySelector('#search').value = '';
       });
     }
