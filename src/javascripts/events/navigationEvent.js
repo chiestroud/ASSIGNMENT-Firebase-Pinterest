@@ -21,7 +21,7 @@ const navigationEvents = (uid) => {
     if (e.keyCode === 13) {
       searchBoardPin(uid, searchValue).then((pinBoardObject) => {
         console.warn(pinBoardObject);
-        showPins(pinBoardObject.pins);
+        showPins(pinBoardObject.pin);
         showBoards(pinBoardObject.board);
         document.querySelector('#search').value = '';
       });

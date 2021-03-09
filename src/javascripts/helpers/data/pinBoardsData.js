@@ -17,10 +17,10 @@ const boardPinInfo = (boardId) => new Promise((resolve, reject) => {
 });
 
 const searchBoardPin = (uid, searchValue) => new Promise((resolve, reject) => {
-  const pins = searchPin(uid, searchValue);
-  const boards = searchBoard(uid, searchValue);
-  Promise.all([pins, boards])
-    .then(([pinsResponse, boardsResponse]) => resolve({ pins: pinsResponse, board: boardsResponse }))
+  const pin = searchPin(uid, searchValue);
+  const board = searchBoard(uid, searchValue);
+  Promise.all([pin, board])
+    .then(([pinResponse, boardResponse]) => resolve({ pin: pinResponse, board: boardResponse }))
     .catch((error) => reject(error));
 });
 
