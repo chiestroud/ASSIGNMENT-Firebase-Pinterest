@@ -33,6 +33,9 @@ const navBar = (userObject) => {
             <li class="nav-item">
               <a class="nav-link" href="#" id="all-pins">Pins</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" id="public-pins">Public Pins</a>
+            </li>
             <li>
             <input
               class="form-control mr-sm-2 mt-1"

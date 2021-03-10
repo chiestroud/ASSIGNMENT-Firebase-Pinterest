@@ -1,13 +1,13 @@
 import firebase from 'firebase/app';
 import 'firebase/auth';
 import { emptyBoards, showBoards } from '../components/boards';
-import addBoardForm from '../components/forms/addBoardForm';
-import addPinForm from '../components/forms/addPinForm';
-import boardInfo from '../components/forms/boardInfo';
+import addBoardForm from '../components/forms/board/addBoardForm';
+import addPinForm from '../components/forms/pin/addPinForm';
+import boardInfo from '../components/forms/board/boardInfo';
 import formModal from '../components/forms/formModal';
-import selectPins from '../components/forms/selectPins';
+import selectPins from '../components/forms/pin/selectPins';
 import updateBoardForm from '../components/forms/updateBoardForm';
-import updatePinForm from '../components/forms/updatePinForm';
+import updatePinForm from '../components/forms/pin/updatePinForm';
 import { showPins } from '../components/pins';
 import {
   createBoard,
@@ -17,11 +17,13 @@ import {
 } from '../helpers/data/boardData';
 import { boardPinInfo, deleteBoardPins } from '../helpers/data/pinBoardsData';
 import {
+  addPin,
   createPin,
   deletePin,
   getSinglePin,
   updatePin
 } from '../helpers/data/pinData';
+import { showUserPublicPins } from '../components/showUserPublicPins';
 
 const domEvents = (uid) => {
   document.querySelector('body').addEventListener('click', (e) => {
@@ -36,6 +38,7 @@ const domEvents = (uid) => {
 
     // CLICK EVENT FOR SHOWING FORM FOR ADDING A NEW BOARD
     if (e.target.id.includes('add-board-btn')) {
+      e.preventDefault();
       formModal('Add A New Board');
       addBoardForm();
       $('#formModal').modal('toggle');
@@ -86,6 +89,7 @@ const domEvents = (uid) => {
         pin_name: document.querySelector('#pinName').value,
         image: document.querySelector('#pinUrl').value,
         board_id: document.querySelector('#selectedBoard').value,
+        public: document.querySelector('#public').checked,
         uid: firebase.auth().currentUser.uid
       };
       createPin(pinObject, uid).then((pinsArray) => showPins(pinsArray));
@@ -117,6 +121,7 @@ const domEvents = (uid) => {
         pin_name: document.querySelector('#pinName').value,
         image: document.querySelector('#pinUrl').value,
         board_id: document.querySelector('#selectedBoard').value,
+        public: document.querySelector('#public').checked,
         uid: firebase.auth().currentUser.uid
       };
       updatePin(firebaseKey, pinObject).then((pinsArray) => showPins(pinsArray));
@@ -131,6 +136,14 @@ const domEvents = (uid) => {
     if (e.target.id.includes('delete-pin')) {
       const firebaseKey = e.target.id.split('--')[1];
       deletePin(firebaseKey, uid).then((pinsArray) => showPins(pinsArray));
+    }
+    // ADD PINS
+    if (e.target.id.includes('add-pin')) {
+      const firebaseKey = e.target.id.split('--')[1];
+      const pinObject = {
+        uid: firebase.auth().currentUser.uid
+      };
+      addPin(firebaseKey, pinObject).then((pinsArray) => showUserPublicPins(pinsArray));
     }
   });
 };

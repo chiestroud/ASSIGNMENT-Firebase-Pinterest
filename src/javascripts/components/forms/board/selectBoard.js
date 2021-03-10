@@ -1,6 +1,6 @@
 import firebase from 'firebase/app';
 import 'firebase/auth';
-import { getBoard } from '../../helpers/data/boardData';
+import { getBoard } from '../../../helpers/data/boardData';
 
 const selectBoard = (pinObject = {}) => {
   let domString = `<label for="board">Select a Board</label>

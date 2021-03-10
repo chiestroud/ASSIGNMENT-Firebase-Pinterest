@@ -73,6 +73,13 @@ const publicPin = () => new Promise((resolve, reject) => {
     .catch((error) => reject(error));
 });
 
+// ADD PUBLIC PINS TO USER
+const addPin = (firebaseKey, pinObject) => new Promise((resolve, reject) => {
+  axios.patch(`${dbUrl}/pins/${firebaseKey}.json`, pinObject)
+    .then(() => publicPin().then((pinsArray) => resolve(pinsArray)))
+    .catch((error) => reject(error));
+});
+
 export {
   getPins,
   deletePin,
@@ -81,5 +88,6 @@ export {
   createPin,
   updatePin,
   searchPin,
-  publicPin
+  publicPin,
+  addPin
 };
