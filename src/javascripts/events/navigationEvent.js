@@ -1,10 +1,11 @@
 import { emptyBoards, showBoards } from '../components/boards';
-import { showBoardPins } from '../components/forms/showBoardPins';
-import { showPinBoards } from '../components/forms/showPinBoard';
+import { showSearchedBoard } from '../components/forms/board/showSearchedBoard';
+import { showSearchedPin } from '../components/forms/pin/showSearchedPin';
 import { emptyPins, showPins } from '../components/pins';
+import { showUserPublicPins } from '../components/showUserPublicPins';
 import { getBoard } from '../helpers/data/boardData';
 import { searchBoardPin } from '../helpers/data/pinBoardsData';
-import { getPins } from '../helpers/data/pinData';
+import { getPins, publicPin } from '../helpers/data/pinData';
 
 const navigationEvents = (uid) => {
   // ALL BOARDS
@@ -22,23 +23,23 @@ const navigationEvents = (uid) => {
     const searchValue = document.querySelector('#search').value.toLowerCase();
     if (e.keyCode === 13) {
       searchBoardPin(uid, searchValue).then((pinBoardObject) => {
-        console.warn(pinBoardObject);
-        showBoardPins(pinBoardObject.board);
-        showPinBoards(pinBoardObject.pin);
-        // showPins(pinBoardObject.pin);
-        // showBoards(pinBoardObject.board);
+        showSearchedBoard(pinBoardObject.board);
+        showSearchedPin(pinBoardObject.pin);
         document.querySelector('#search').value = '';
       });
     }
   });
 
-  // document.querySelector('#search').addEventListener('keyup', (e) => {
-  //   const searchValue = document.querySelector('#search').value.toLowerCase();
-  //   if (e.keyCode === 13) {
-  //     searchPin(uid, searchValue).then(showPins);
-  //     document.querySelector('#search').value = '';
-  //   }
-  // });
+  // PUBLIC PINS
+  document.querySelector('#public-pins').addEventListener('click', () => {
+    publicPin().then((pinsArray) => {
+      if (pinsArray.length) {
+        showUserPublicPins(pinsArray);
+      } else {
+        emptyPins();
+      }
+    });
+  });
 
   // ALL PINS
   document.querySelector('#all-pins').addEventListener('click', () => {

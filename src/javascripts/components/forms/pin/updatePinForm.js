@@ -1,4 +1,4 @@
-import selectBoard from './selectBoard';
+import selectBoard from '../board/selectBoard';
 
 const updatePinForm = (pinObject) => {
   document.querySelector('#modal-body').innerHTML = `<form id="submit-pin-form" class="mb-4">
@@ -13,6 +13,10 @@ const updatePinForm = (pinObject) => {
   <div class="form-group" id="select-board">
     <label for="title">Select A Board</label>
     <input type="url" class="form-control" id="boardId" aria-describedby="selectedBoard" placeholder="Select A Board" required>
+  </div>
+  <div class="form-check">
+    <input type="checkbox" class="form-check-input" id="public">
+    <label class="form-check-label" for="public">Public?</label>
   </div>
   <button type="submit" id="update-pin--${pinObject.firebaseKey}" class="btn btn-primary">Update Pin</button>
 </form>`;

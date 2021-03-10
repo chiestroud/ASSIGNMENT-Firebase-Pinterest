@@ -12,7 +12,7 @@ const homeScreen = () => {
                                                 <span class="s">S</span>
                                                 <span class="t">T</span>
                                               </h1>
-                                              <h1 class="text-white">Here are some of the public pins you may be interested.</h1>`;
+                                              <h1 class="text-white">Please Come Back! Aren't You Interested in These Pins?</h1>`;
   document.querySelector('#boardInfo').innerHTML = '';
   publicPin();
 };

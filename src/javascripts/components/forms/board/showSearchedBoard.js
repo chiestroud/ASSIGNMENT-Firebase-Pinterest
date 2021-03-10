@@ -1,4 +1,4 @@
-const showBoardPins = (pinBoardObject) => {
+const showSearchedBoard = (pinBoardObject) => {
   document.querySelector('#goBackButton').innerHTML = '<button type="button" class="btn btn-success" id="return">Go Back to All Boards</button>';
   document.querySelector('#main').innerHTML = '';
   document.querySelector('#boardInfo').innerHTML = '';
@@ -20,4 +20,4 @@ const emptyBoards = () => {
   document.querySelector('#main').innerHTML = '<h1 class="bodyMessage">No Boards</h1>';
 };
 
-export { showBoardPins, emptyBoards };
+export { showSearchedBoard, emptyBoards };
