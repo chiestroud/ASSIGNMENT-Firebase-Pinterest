@@ -16,7 +16,8 @@ const showPins = (array) => {
 };
 
 const emptyPins = () => {
-  document.querySelector('#main').innerHTML = '<h1 class="bodyMessage">No Boards</h1>';
+  document.querySelector('#goBackButton').innerHTML = '<button class="btn btn-primary mb-5" id="add-newPin-btn">Add New Pin <i class="fas fa-map-pin"></i></button>';
+  document.querySelector('#main').innerHTML = '<h1 class="bodyMessage">No Pins</h1>';
 };
 
 export { showPins, emptyPins };
