@@ -23,6 +23,12 @@ const showBoards = (array) => {
 };
 
 const emptyBoards = () => {
+  document.querySelector('#goBackButton').innerHTML = '';
+  document.querySelector('#goBackButton').innerHTML = `<div class="container d-flex justify-content-around">
+                                                        <h1 class="bodyMessage">List of boards <i class="fas fa-clipboard-list"></i></h1>
+                                                       </div>
+                                                        <button class="btn btn-success mb-3" data-toggle="modal" data-target="#formModal" id="add-board-btn">Add New Board <i class="fas fa-clipboard-list"></i></button>
+                                                        `;
   document.querySelector('#main').innerHTML = '<h1 class="bodyMessage">No Boards</h1>';
 };
 

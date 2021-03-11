@@ -77,7 +77,7 @@ const domEvents = (uid) => {
     }
 
     // CLICK EVENT FOR SHOWING FORM FOR ADDING A NEW PIN
-    if (e.target.id.includes('add-pin-btn')) {
+    if (e.target.id.includes('add-newPin-btn')) {
       formModal('Add A New Pin');
       addPinForm();
       $('#formModal').modal('toggle');
