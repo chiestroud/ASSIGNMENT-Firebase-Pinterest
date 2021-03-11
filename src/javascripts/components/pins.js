@@ -1,7 +1,7 @@
 const showPins = (array) => {
   document.querySelector('#goBackButton').innerHTML = '';
   document.querySelector('#main').innerHTML = '';
-  document.querySelector('#boardInfo').innerHTML = '<button class="btn btn-primary mb-5" id="add-pin-btn">Add New Pin <i class="fas fa-map-pin"></i></button>';
+  document.querySelector('#boardInfo').innerHTML = '<button class="btn btn-primary mb-5" id="add-newPin-btn">Add New Pin <i class="fas fa-map-pin"></i></button>';
   array.forEach((item) => {
     document.querySelector('#main').innerHTML += `<div id="pinContainer" class="card" style="width: 20rem;">
                                                     <img class="card-img-top pinImg" src="${item.image}" alt="${item.pin_name}">
