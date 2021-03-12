@@ -1,4 +1,5 @@
 import { emptyBoards, showBoards } from '../components/boards';
+import { darkMode, lightMode } from '../components/buttons/darkLightMode';
 import { showSearchedBoard } from '../components/forms/board/showSearchedBoard';
 import { showSearchedPin } from '../components/forms/pin/showSearchedPin';
 import { emptyPins, showPins } from '../components/pins';
@@ -50,6 +51,14 @@ const navigationEvents = (uid) => {
         emptyPins();
       }
     });
+  });
+
+  document.querySelector('#lightMode').addEventListener('click', () => {
+    darkMode();
+  });
+
+  document.querySelector('#darkMode').addEventListener('click', () => {
+    lightMode();
   });
 };
 

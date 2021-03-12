@@ -36,3 +36,11 @@
 .pinInfo {
   height: 30%;
 }
+
+.userImage {
+  width: 75px;
+  position: absolute;
+  top: 60%;
+  border-radius: 50%;
+  object-fit: cover;
+}

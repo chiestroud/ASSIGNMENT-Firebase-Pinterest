@@ -90,7 +90,8 @@ const domEvents = (uid) => {
         image: document.querySelector('#pinUrl').value,
         board_id: document.querySelector('#selectedBoard').value,
         public: document.querySelector('#public').checked,
-        uid: firebase.auth().currentUser.uid
+        uid: firebase.auth().currentUser.uid,
+        url: firebase.auth().currentUser.photoURL
       };
       createPin(pinObject, uid).then((pinsArray) => showPins(pinsArray));
       $('#formModal').modal('toggle');
@@ -122,7 +123,8 @@ const domEvents = (uid) => {
         image: document.querySelector('#pinUrl').value,
         board_id: document.querySelector('#selectedBoard').value,
         public: document.querySelector('#public').checked,
-        uid: firebase.auth().currentUser.uid
+        uid: firebase.auth().currentUser.uid,
+        url: firebase.auth().currentUser.photoURL
       };
       updatePin(firebaseKey, pinObject).then((pinsArray) => showPins(pinsArray));
       $('#formModal').modal('toggle');
