@@ -143,7 +143,8 @@ const domEvents = (uid) => {
     if (e.target.id.includes('add-pin')) {
       const firebaseKey = e.target.id.split('--')[1];
       const pinObject = {
-        uid: firebase.auth().currentUser.uid
+        uid: firebase.auth().currentUser.uid,
+        url: firebase.auth().currentUser.photoURL
       };
       addPin(firebaseKey, pinObject).then((pinsArray) => showUserPublicPins(pinsArray));
     }
