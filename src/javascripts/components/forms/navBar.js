@@ -38,14 +38,16 @@ const navBar = (userObject) => {
             </li>
             <li>
             <input
-              class="form-control mr-sm-2 mt-1"
+              class="form-control mr-sm-2 mt-1 ml-2"
               id="search"
               placeholder="Search Boards & Pins"
               aria-label="Search"
             />
             </li>
           </ul>
-          <div id="welcomeMsg" class="mr-3">Welcome back ${userObject.displayName}</div>
+          <button type="button" id="lightMode" class="ml-3 btn btn-dark btn-sm">Light Mode</button>
+          <button type="button" id="darkMode" class="btn btn-dark btn-sm">Dark Mode</button>
+          <div id="welcomeMsg" class="ml-5 mr-3">Welcome back ${userObject.displayName}</div>
           <img id="profileImg" class="mr-3" src="${userObject.photoURL}"></img>
           <div id="logoutButton"><button id="google-auth" class="btn btn-danger">SIGNOUT</button></div>
         </div>

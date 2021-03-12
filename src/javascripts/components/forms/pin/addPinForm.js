@@ -2,7 +2,7 @@ import selectBoard from '../board/selectBoard';
 
 const addPinForm = () => {
   document.querySelector('#modal-body').innerHTML = `
-  <form id="submit-pin-form" class="mb-4">
+  <form id="submit-pin-form" class="mb-4 text-dark">
     <div class="form-group">
       <label for="pinName">Pin Name</label>
       <input type="text" class="form-control" id="pinName" aria-describedby="pinName" placeholder="Pin Name" required>

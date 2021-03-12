@@ -24,6 +24,7 @@ $letters:
 
 body {
   background-color:#111;
+  color: white;
   text-align: center;
   margin-top: 100px;
   font-family: 'Varela Round', sans-serif;
@@ -46,8 +47,7 @@ body {
   font-size: 1.5rem;
 }
 
-.bodyMessage {
-  color: white;
+.headerColor {
   font-size: 2rem;
   margin-top: 1.5%;
 }
@@ -61,10 +61,6 @@ body {
   height: 120px;
   border-radius: 50%;
   object-fit: fill;
-}
-
-.headerTitle {
-  color: white;
 }
 
 h1.headerTitle {
