@@ -4,7 +4,7 @@ const darkMode = () => {
 };
 
 const lightMode = () => {
-  document.querySelector('body').style.backgroundColor = 'black';
+  document.querySelector('body').style.backgroundColor = '#111';
   document.querySelector('body').style.color = 'white';
 };
 export { darkMode, lightMode };
