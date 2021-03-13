@@ -1,5 +1,5 @@
 const darkMode = () => {
-  document.querySelector('body').style.backgroundColor = 'white';
+  document.querySelector('body').style.backgroundColor = '#ffeeda';
   document.querySelector('body').style.color = 'black';
 };
 

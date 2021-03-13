@@ -65,7 +65,6 @@ const searchPin = (uid, searchValue) => new Promise((resolve, reject) => {
   })
     .catch((error) => reject(error));
 });
-
 // PUBLIC PINS
 const publicPin = () => new Promise((resolve, reject) => {
   axios.get(`${dbUrl}/pins.json?orderBy="public"&equalTo=true`)

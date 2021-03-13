@@ -1,5 +1,6 @@
 const showPins = (array) => {
   document.querySelector('#goBackButton').innerHTML = '';
+  document.querySelector('#boardContainer').innerHTML = '';
   document.querySelector('#main').innerHTML = '';
   document.querySelector('#boardInfo').innerHTML = '<button class="btn btn-primary mb-3" id="add-newPin-btn">Add New Pin <i class="fas fa-map-pin"></i></button>';
   array.forEach((item) => {

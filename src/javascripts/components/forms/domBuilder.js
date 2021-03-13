@@ -5,6 +5,7 @@ const domBuilder = () => {
                                               <div id="boardInfo"></div>
                                               <div id="boardContainer" class="container d-flex justify-content-around"></div>
                                               <div id="main" class="container d-flex justify-content-around"></div>
+                                              <div id="publicContainer" class="container d-flex justify-content-around"></div>
                                               `;
 };
 
