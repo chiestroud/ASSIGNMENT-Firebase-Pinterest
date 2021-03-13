@@ -16,8 +16,8 @@ Dark Move vs Light Mode
 
 ### Mobile screen
 <p float="left">
-  <img src="src/images/pinterest-phone.png" width="200">
-  <img src="src/images/pinterest-phone-light.png" width="200">
+  <img src="src/images/pinterest-phone.png" width="200" height="400">
+  <img src="src/images/pinterest-phone-light.png" width="200" height="400">
 </p>
 
 ## Technologies
