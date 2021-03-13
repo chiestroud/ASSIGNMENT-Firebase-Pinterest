@@ -1,6 +1,7 @@
 const showUserPublicPins = (array) => {
   document.querySelector('#main').innerHTML = '';
   document.querySelector('#goBackButton').innerHTML = '';
+  document.querySelector('#boardContainer').innerHTML = '';
   array.forEach((item) => {
     document.querySelector('#main').innerHTML += `<div id="pinContainer" class="card" style="width: 20rem;">
                                                     <img class="card-img-top pinImg" src="${item.image}" alt="${item.pin_name}">
