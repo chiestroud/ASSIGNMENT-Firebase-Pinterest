@@ -1,4 +1,4 @@
-# Chie's Pinterest <img src="pinterest-brands.svg" width="50" height="50">
+# Chie's Pinterest <img src="src/images/pinterest-brands.svg" width="50" height="50">
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/dcaa2b1e-3dfd-4912-96a8-1f0331b2b8c2/deploy-status)](https://app.netlify.com/sites/cs-pinterest/deploys)
 
@@ -10,11 +10,11 @@ Chie's Pinterest gives you an unique pinterest-like experience. As an user, you 
 
 <p float="left">
   <img src="src/images/pinterest.png" width="350">
-  <img src="src/images/pinterestLight.png" witdth="350">
+  <img src="src/images/pinterestLight.png" width="350">
 </p>
 
-Mobile screen
-<img src="src/images/pinterest-phone.png" width="500">
+### Mobile screen
+<img src="src/images/pinterest-phone.png" width="250">
 
 ## Technologies
 HTML / CSS / JavaScript
@@ -32,3 +32,6 @@ HTML / CSS / JavaScript
 
 ## Wireframe
 <a href="https://www.figma.com/file/7fWlyA3kfMRzDoZQ0qu1P4/Pinterest?node-id=0%3A1" target="_blank">Chie's Figma</a>
+
+## Project Board
+<a href="https://github.com/chiestroud/ASSIGNMENT-Firebase-Pinterest/projects/1" target="_blank">Chie's Pinterest Project Board</a>
