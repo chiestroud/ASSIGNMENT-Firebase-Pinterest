@@ -17,9 +17,7 @@ Dark Move vs Light Mode
 ### Mobile screen
 <p float="left">
   <img src="src/images/pinterest-phone.png" width="200">
-  <img src="src/images/pinterest-phone-light
-  
-  .png" width="200">
+  <img src="src/images/pinterest-phone-light.png" width="200">
 </p>
 
 ## Technologies
@@ -34,7 +32,7 @@ HTML / CSS / JavaScript
 </ul>
 
 ## Featured Video
-![Loom Video](https://www.loom.com/share/068002d207a8488a9120f3a8888f4ef0)
+<a href="https://www.loom.com/share/068002d207a8488a9120f3a8888f4ef0" target="_blank">Chie's Pinterest Loom Video</a>
 
 ## Project Board
 <a href="https://github.com/chiestroud/ASSIGNMENT-Firebase-Pinterest/projects/1" target="_blank">Chie's Pinterest Project Board</a>
